@@ -6,7 +6,7 @@ services:
 before_install:
         - docker build -t web:v1 .
 script:
-        - docker run web:v1
+        - docker run web:v1 -- --coverage
 
 deploy:
         provider: elasticbeanstalk
